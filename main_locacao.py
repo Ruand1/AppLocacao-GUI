@@ -13,11 +13,13 @@ class LiveApp(MDApp, App):
     KV_FILES = {
         os.path.join(os.getcwd(), 'screens/screenmanager.kv'),
         os.path.join(os.getcwd(), 'screens/login_screen/loginscreen.kv'),
+        os.path.join(os.getcwd(), 'screens/new_register/newregister.kv'),
     }
 
     CLASSES = {
         'MainScreenManager': 'screens.screenmanager',
         'LoginScreen': 'screens.login_screen.loginscreen',
+        'NewRegister': 'screens.new_register.newregister',
     }
 
     AUTORELOADER_PATHS = [

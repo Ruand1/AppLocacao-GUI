@@ -29,5 +29,11 @@ Ver Cadastro - Padrão - Listar todos os cadastros
 27/02/22 -  
 - Fazer tela do novo cadastro - 
 	- cadastrar em json -
+		variaveis ja estão recebendo os valores cadastrados - OK
+		cadastrar em arquivo e puxar cadastros - 
+	- usar json para validar cadastro -
+	- montar popup para aviso de não cadastrado -
+	- montar popup de cadastro correto - 
+	- verificar mandar email de confirmação -
 
 - Pensar em como vai ficar tela pos login -
