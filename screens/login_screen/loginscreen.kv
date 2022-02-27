@@ -1,0 +1,101 @@
+<LoginScreen>
+    MDFloatLayout:
+        orientation : 'vertical'
+
+# <--- Barra de Ferramentas Superior
+        MDToolbar:
+            md_bg_color: 1, 1, 1, 1
+            specific_text_color: app.theme_cls.primary_color
+            #title: 'App de Locação'
+            elevation: 0  #<---- Sombra do Toolbar
+            left_action_items: [['arrow-left', lambda x: root.callback()]]
+            pos_hint: {'top': 1}
+            #md_bg_color: app.theme_cls.accent_color
+
+# <--- Imagem de Saudação
+        Image:
+            source: 'img/users.png'
+            size_hint: (0.4 , 0.4)
+            pos_hint: {'center_x': .5, 'center_y': .80}
+
+# <--- Mensagem de Saudação
+        MDLabel:
+            text: 'Seja Bem vinda(o)'
+            font_style: 'H6'
+            bold: True  #<--- Negrito
+            pos_hint: {'center_x': .5, 'center_y': .68}
+            halign: 'center'  #<--- Centralizado
+
+# <--- Mensagem de Saudação - puxando horário
+        MDLabel:
+            id: welcome_label
+            #text: 'Faça o login'
+            font_style: 'Caption'
+            pos_hint: {'center_x': .5, 'center_y': .64}
+            halign: 'center'
+
+# <--- Entrada de dados - Email
+        MDTextField:
+            hint_text: 'E-mail'
+            pos_hint: {'center_x': .5, 'center_y': .50}
+            size_hint_x: .8
+            halign: 'center'
+            icon_right: 'mail'
+            icon_right_color: app.theme_cls.primary_color
+#            mode: "rectangle"  # <--- Aparece o retangulo em volta
+#            required: True  # <--- Aparecer mensagem de cano requerido
+            helper_text_mode: "on_error"
+#            font_name: 'font/gothic.ttf'  #<--- Para mudar a fonte acrescentar fonte na pasta
+
+# <--- Entrada de dados - Senha
+        MDTextField:
+            id: password_user
+            hint_text: 'Senha'
+            pos_hint: {'center_x': .5, 'center_y': .44}
+            size_hint_x: .8
+            halign: 'center'
+            text: ''
+            password: True  # <--- Deixa o password escondido
+#            icon_left: "key-variant"  # <--- VERIFICAR ERRO AO COLOCAR ICONE NA ESQUERDA
+
+# <--- Icone abaixo tem a função de mostrar/esconder a senha do usuário na tela
+        MDIconButton:
+            icon: "eye-off"
+            pos_hint: {"center_y": .45}
+            pos: password_user.width - self.width + dp(35), 0
+            theme_text_color: "Hint"
+            on_release:
+                self.icon = "eye" if self.icon == "eye-off" else "eye-off"
+                password_user.password = False if password_user.password is True else True
+
+        MDTextButton:
+            text: 'Esqueci a senha'
+            text_color: app.theme_cls.primary_color
+            font_size: 11
+            pos_hint: {'center_x': .75, 'center_y': .39}
+
+        MDRaisedButton:
+            text: 'Entrar'
+            text_color: 0, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .32}
+            size_hint_x: .8
+            elevation: 10
+
+        MDRaisedButton:
+            text: 'Novo Cadastro'
+            text_color: 0, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .25}
+            size_hint_x: .8
+            elevation: 10
+
+        MDIconButton:
+            icon : 'lightbulb-on'
+            pos_hint: {'center_x': .9, 'center_y': .04}
+            on_release: app.dark_theme()
+
+        MDIconButton:
+            icon : 'lightbulb-on-outline'
+            pos_hint: {'center_x': .8, 'center_y': .04}
+            on_release: app.light_theme()
+
+
