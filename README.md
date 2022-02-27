@@ -1,2 +1,2 @@
-# AppLoca-o-GUI
+# AppLocacao-GUI
 App de locação Padrão
