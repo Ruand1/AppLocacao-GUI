@@ -1,0 +1,59 @@
+<InitialScreen>
+    MDFloatLayout:
+        orientation : 'vertical'
+
+# <--- Barra de Ferramentas Superior
+        MDToolbar:
+            md_bg_color: 1, 1, 1, 1
+            specific_text_color: app.theme_cls.primary_color
+            title: 'Home'
+            elevation: 0  #<---- Sombra do Toolbar
+            left_action_items: [['arrow-left', lambda x: root.callback()]]
+            pos_hint: {'top': 1}
+
+        MDLabel:
+            text: 'Olá'
+            pos_hint: {'center_x': .15, 'center_y': .87}
+            halign: 'center'
+
+        MDCard:
+            orientation: 'vertical'
+            size_hint: None, None
+            size: 130, 130
+            pos_hint: {'center_x': .25, 'center_y': .73}
+            elevation: 15
+            Image:
+                source: 'img/pencil.png'
+                #pos_hint: {'center_x': .5, 'center_y': .1}
+                size_hint: None, None
+                size_hint_y: .5
+                allow_stretch: True
+                keep_ratio: False
+                halign: 'center'
+            MDTextButton:
+                text: 'Novo Cadastro'
+                font_size: 14
+                pos_hint: {'center_x': .5, 'center_y': .1}
+                halign: 'center'
+                bold: True
+
+        MDCard:
+            orientation: 'vertical'
+            size_hint: None, None
+            size: 130, 130
+            pos_hint: {'center_x': .75, 'center_y': .73}
+            elevation: 15
+            Image:
+                source: 'img/eyes.jpg'
+                #pos_hint: {'center_x': .5, 'center_y': .1}
+                size_hint: None, None
+                size_hint_y: .5
+                allow_stretch: True
+                keep_ratio: False
+                halign: 'center'
+            MDTextButton:
+                text: 'Ver Cadastros'
+                font_size: 14
+                pos_hint: {'center_x': .5, 'center_y': .1}
+                halign: 'center'
+                bold: True

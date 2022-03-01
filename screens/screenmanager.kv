@@ -2,9 +2,12 @@
 #:import platform kivy.utils.platform
 #:include LoginScreen login_screen.LoginScreen
 #:include NewRegister new_register.NewRegister
+#:include InitialScreen initial_screen.InitialScreen
 
 <MainScreenManager>
     LoginScreen:
         name: 'loginscreen'
     NewRegister:
         name: 'newregister'
+    InitialScreen:
+        name: 'initialscreen'

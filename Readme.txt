@@ -12,8 +12,8 @@ Ver Cadastro - Padrão - Listar todos os cadastros
 26/02/22 - Finalizando videos KivyMD
 
 - Criando Tela de Login - OK
-	- Colocando datetime - mostrar Bom dia, Boa Tarde, Boa Noite
-		- criar variavel que receba a hora do dispositivo, se for até
+	- Colocando datetime - mostrar Bom dia, Boa Tarde, Boa Noite - OK
+		- criar variavel que receba a hora do dispositivo, se for até - OK
 		meio dia (Bom Dia), até as 18 (Boa Tarde), depois (Boa Noite)
 
 - Continuando Video -
@@ -23,17 +23,36 @@ Ver Cadastro - Padrão - Listar todos os cadastros
 - Tela de Login - OK
 
 - Foi acrescentado botões para chavear entre dark/light theme - OK
-	- Verificar possibilidade de chavear com apenas um botão
+	- Verificar possibilidade de chavear com apenas um botão - PENDENTE
 		- Não esta funcionando se o icone é movimentado na posição y
 
-27/02/22 -  
+27/02/22 e 28/02/22 -  
 - Fazer tela do novo cadastro - 
-	- cadastrar em json -
+	- cadastrar em json - OK
 		variaveis ja estão recebendo os valores cadastrados - OK
-		cadastrar em arquivo e puxar cadastros - 
-	- usar json para validar cadastro -
-	- montar popup para aviso de não cadastrado -
-	- montar popup de cadastro correto - 
-	- verificar mandar email de confirmação -
+		cadastrar em arquivo e puxar cadastros - OK
+			- ERRO - QUANDO USUARIO ENTRA NO CADASTRO - MOSTRA DUAS VEZES
+			- ERRO - POPUP ESTA SENDO MOSTRADO 2 VEZES
 
-- Pensar em como vai ficar tela pos login -
+	- usar json para validar cadastro - OK
+	- montar popup de cadastro correto - OK
+
+01/03/22 - 
+- Tela de cadastro - OK
+	- Grava cadastro único - OK
+	- PopUps aparecendo duas vezes - Verificar erro posteriormente
+		- Quando aperta o botão cadastrar, aparentemente o programa faz um loop duas vezes
+
+- Tela Entrar - Inicial - 
+	- montar popup para aviso de não cadastrado - OK
+	- validar email e senha do cadastro - OK
+	- verificar mandar email de confirmação - PENDENTE
+	
+	- Montar desenho da tela inicial -
+		- Cadastrar objetos(Padrão) - OK
+		- Fazer botão de menu superior lado direito - PENDENTE
+		
+		- Colocar saudação, puxando o nome do cadastro - FALTA PUXAR NOME
+
+		- Criar telas   - Novo Cadastro
+		 		- Ver Cadastros

@@ -10,7 +10,6 @@
             elevation: 0  #<---- Sombra do Toolbar
             left_action_items: [['arrow-left', lambda x: root.callback()]]
             pos_hint: {'top': 1}
-            #md_bg_color: app.theme_cls.accent_color
 
 # <--- Titulo do box de cadastro
         MDLabel:
@@ -24,59 +23,47 @@
         MDTextField:
             id: name_user
             hint_text: 'Nome'
-            required: True
-            helper_text_mode: "on_error"
-            helper_text: "Campo Obrigatório"
             pos_hint: {'center_x': .5, 'center_y': .78}
-            size_hint_x: .8
+            size_hint: .8, None
+            halign: 'center'
 
 # <--- Campo para entrada do sobrenome do usuário
         MDTextField:
             id: last_name_user
             hint_text: 'Sobrenome'
-            required: True
-            helper_text_mode: "on_error"
-            helper_text: "Campo Obrigatório"
             pos_hint: {'center_x': .5, 'center_y': .70}
-            size_hint_x: .8
+            size_hint: .8, None
+            halign: 'center'
 
 # <--- Campo para entrada do email do usuário
         MDTextField:
             id: email_user
             hint_text: 'Email'
-            required: True
-            helper_text_mode: "on_error"
-            helper_text: "Campo Obrigatório"
             pos_hint: {'center_x': .5, 'center_y': .62}
-            size_hint_x: .8
+            size_hint: .8, None
+            halign: 'center'
 
 # <--- Campo para entrada da senha do usuário
         MDTextField:
             id: password_user
             hint_text: 'Senha'
-            required: True
-            helper_text_mode: "on_error"
-            helper_text: "Campo Obrigatório"
             pos_hint: {'center_x': .5, 'center_y': .45}
-            size_hint_x: .8
+            size_hint: .8, None
+            halign: 'center'
 
 # <--- Campo para entrada da senha do usuário
         MDTextField:
             id: password_confirmation_user
             hint_text: 'Confirmação de senha'
-            required: True
-            helper_text_mode: "on_error"
-            helper_text: "Campo Obrigatório"
             pos_hint: {'center_x': .5, 'center_y': .37}
-            size_hint_x: .8
+            size_hint: .8, None
+            halign: 'center'
 
 # <--- Botão para confirmar cadastro
         MDRaisedButton:
             text: 'Cadastrar'
             text_color: 0, 1, 1, 1
             pos_hint: {'center_x': .5, 'center_y': .29}
-            size_hint_x: .8
+            size_hint: .8, None
             elevation: 10
-            on_press: root.register_user()
-            on_release: root.callback()
-            #on_release: if password_confirmation_user == password_user else fazer popup com cadastro realizado com sucesso
+            on_release: root.register_user()
