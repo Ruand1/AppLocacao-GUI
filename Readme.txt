@@ -37,7 +37,7 @@ Ver Cadastro - Padrão - Listar todos os cadastros
 	- usar json para validar cadastro - OK
 	- montar popup de cadastro correto - OK
 
-01/03/22 - 
+01/03/22 e 02/03/22- 
 - Tela de cadastro - OK
 	- Grava cadastro único - OK
 	- PopUps aparecendo duas vezes - Verificar erro posteriormente
@@ -52,7 +52,17 @@ Ver Cadastro - Padrão - Listar todos os cadastros
 		- Cadastrar objetos(Padrão) - OK
 		- Fazer botão de menu superior lado direito - PENDENTE
 		
-		- Colocar saudação, puxando o nome do cadastro - FALTA PUXAR NOME
+		- Colocar saudação, puxando o nome do cadastro - FALTA PUXAR NOME - NÃO COLOCAR
 
 		- Criar telas   - Novo Cadastro
-		 		- Ver Cadastros
+					- Widgets - OK
+					- Inteligência - OK
+					- Escolher Imagem - OK
+						- Verificar se é possivel fazer um filechooser em um Mddialog, para não precisar criar outra tela - Não foi preciso, um botão ja gera a tela de filechooser - OK
+
+
+03/03/22 - 
+		- Ver Cadastros - Fazer tela ver cadastros - gerando um MDCard para cada widget no cadastro
+
+		- Fazer as movimentações das telas "Animações" - root.manager.transition.direction = 'left'
+			VER SITE https://kivy.org/doc/stable/api-kivy.uix.screenmanager.html

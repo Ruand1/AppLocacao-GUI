@@ -1,0 +1,95 @@
+<NewObject>
+    MDFloatLayout:
+        orientation : 'vertical'
+
+# <--- Barra de Ferramentas Superior
+        MDToolbar:
+            md_bg_color: 0, 1, 1, 1
+            specific_text_color: app.theme_cls.primary_color
+            title: 'Novo Cadastro'
+            elevation: 0  #<---- Sombra do Toolbar
+            left_action_items: [['arrow-left', lambda x: root.callback()]]
+            pos_hint: {'top': 1}
+
+# <--- Campo para entrada das informações dos objetos
+        MDTextField:
+            id: object_name
+            hint_text: 'Nome'
+            pos_hint: {'center_x': .5, 'center_y': .85}
+            size_hint: .8, None
+            halign: 'center'
+            #icon_right: 'alphabetical'
+
+        MDTextField:
+            id: object_description
+            hint_text: 'Descrição'
+            pos_hint: {'center_x': .5, 'center_y': .70}
+            size_hint: .8, None
+            halign: 'center'
+            multiline: True
+            #icon_right: 'billboard'
+
+        MDTextField:
+            id: object_quantity
+            hint_text: 'Quantidade'
+            pos_hint: {'center_x': .5, 'center_y': .55}
+            size_hint: .8, None
+            halign: 'center'
+            input_type: 'number'
+            #icon_right: 'counter'
+
+        MDTextField:
+            id: object_price
+            hint_text: 'Preço'
+            pos_hint: {'center_x': .5, 'center_y': .45}
+            size_hint: .8, None
+            halign: 'center'
+            #icon_right: 'currency-brl'
+
+# TECLADO ACEITAR SOMENTE NUMEROS
+# ICON LEFT
+# <--- FloatLayout para carregar a imagem.
+        MDCard:
+            orientation: 'vertical'
+            size_hint: None, None
+            size: 110, 110
+            pos_hint: {'center_x': .5, 'center_y': .33}
+            elevation: 15
+            spacing: 10
+            padding: 20
+            ripple_behavior: True
+            Image:
+                id: image_to_pass
+                source: 'img/photo_here.png'
+                pos_hint: {'center_x': .5, 'center_y': .8}
+                size_hint: None, None
+                size: '70dp', '90dp'
+                allow_stretch: True
+                keep_ratio: True
+            MDLabel:
+                text: 'Imagem aqui'
+                font_size: 10
+                pos_hint: {'center_x': .5, 'center_y': .3}
+                bold: True
+                halign: 'center'
+                theme_text_color: "Custom"
+                text_color: app.theme_cls.primary_color
+
+
+# <--- Botão para escolher imagem
+        MDRaisedButton:
+            text: 'Escolher Imagem'
+            text_color: 0, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .18}
+            size_hint: .8, None
+            elevation: 10
+            on_release: root.file_manager_open()
+
+# <--- Botão para confirmar cadastro
+        MDRaisedButton:
+            text: 'Cadastrar'
+            text_color: 0, 1, 1, 1
+            pos_hint: {'center_x': .5, 'center_y': .10}
+            size_hint: .8, None
+            elevation: 10
+            #on_release: root.register_object()
